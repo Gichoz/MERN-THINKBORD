@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: forest --default, light;
+}
+
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+

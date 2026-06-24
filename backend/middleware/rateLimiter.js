@@ -30,10 +30,10 @@ import { ratelimiter } from '../config/upstash.js'
 const rateLimiter = async (req, res, next) => {
   try {
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-    console.log("Rate limiter running for IP:", ip);
+    // console.log("Rate limiter running for IP:", ip);
     
     const { success, remaining } = await ratelimiter.limit(ip);
-    console.log("Success:", success, "Remaining:", remaining);
+    // console.log("Success:", success, "Remaining:", remaining);
     
     if (!success) {
       return res.status(429).json({ 
